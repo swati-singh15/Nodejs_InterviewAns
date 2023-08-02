@@ -12,13 +12,11 @@ fs.readFile(fileName, 'utf8', (err, data) => {
 });
 
 function countWords(text) {
-  // Remove any leading/trailing spaces and extra spaces between words
+ 
   const cleanedText = text.trim().replace(/\s+/g, ' ');
 
-  // Split the cleaned text by spaces to count the words
   const wordsArray = cleanedText.split(' ');
 
-  // Filter out any empty strings from the array (e.g., multiple spaces)
   const filteredArray = wordsArray.filter(word => word !== '');
 
   return filteredArray.length;
